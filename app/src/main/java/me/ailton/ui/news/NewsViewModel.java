@@ -1,6 +1,6 @@
 package me.ailton.ui.news;
 
-import android.widget.TextView;
+
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -19,10 +19,12 @@ public class NewsViewModel extends ViewModel {
 
         this.news= new MutableLiveData<>();
 
+        // TODO Remover Mock de Noticias
         List<News> news = new ArrayList<>();
-        news.add(new News(TextView:"ferroviaria",textView2"ferroviaria"));
-        news.add(new News(title:"ferroviaria", description"ferroviaria"));
-        news.add(new News(title:"ferroviaria", description"ferroviaria"));
+        news.add(new News("Ferroviaria Tem Desfalque Importante","Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
+        news.add(new News("Ferrinha Joga no Sábado","Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
+        news.add(new News("Copa Do Mundo Feminina Esta Terminando","Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."));
+
 
         this.news.setValue(news);
     }
